@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clark University Sustainable Food Waste Reduction Project</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Overview Section -->
+    <section id="project-overview" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Sustainable Food Waste Reduction Project</h2>
+            <h3 class="text-center mb-4">Clark University</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/FOODWASTEproject.png" alt="Food Waste Project" class="img-fluid centered-image" style="width:80%; height:auto; display:block; margin-left:auto; margin-right:auto; padding-top: 5%;">
+                </div>
+                <div class="col-md-6">
+                    <h4>Project Overview</h4>
+                    <p>This project focuses on reducing food waste at Clark University by developing a web application that allows dining services to log and track food waste data. The system aims to help the university minimize waste and improve sustainability efforts.</p>
+                    <p><strong>Technologies Used:</strong> ExpressJS, MongoDB, JavaScript, HTML, CSS, Docker, Git.</p>
+                    <p><strong>GitHub Repository:</strong> <a href="https://github.com/ahearndylan/ClarkFoodWasteApp" target="_blank">View the project on GitHub</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Description Section -->
+    <section id="project-description" class="py-5 bg-light">
+        <div class="container">
+            <h4 class="mb-4">Project Description</h4>
+            <p>The Food Waste Reduction project is a web-based application developed for Clark University Dining Services. The application allows staff to log food waste by category, date, and weight. This data is then used to analyze patterns and implement strategies to reduce overall food waste on campus.</p>
+            <p>This project was developed during a hackathon focused on green initiatives and sustainability, organized by C4 and TIE. It was built with the aim of increasing sustainability on campus, providing real-time data analysis to help dining services make informed decisions.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h4 class="mb-4">Features</h4>
+            <p>The Food Waste Reduction system includes several key features:</p>
+            <ul>
+                <li><strong>Food Waste Logging:</strong> Allows staff to log food waste by category, including overproduction, spoilage, and plate waste.</li>
+                <li><strong>Real-Time Data Analysis:</strong> Provides immediate insights into waste patterns, helping to identify areas for improvement.</li>
+                <li><strong>User Authentication:</strong> Ensures that only authorized staff members can access the system and log data.</li>
+                <li><strong>Responsive Design:</strong> The application is fully responsive, making it accessible on both desktop and mobile devices.</li>
+                <li><strong>Data Export:</strong> Allows exporting of food waste data for further analysis and reporting.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Setup and Installation Section -->
+    <section id="setup-installation" class="py-5 bg-light">
+        <div class="container">
+            <h4 class="mb-4">Setup and Installation</h4>
+            <p>This section provides instructions on how to set up the Food Waste Reduction system locally:</p>
+            <h5>Prerequisites</h5>
+            <ul>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+                <li>Docker</li>
+            </ul>
+            <h5>Setup Instructions</h5>
+            <ol>
+                <li><strong>Clone the repository:</strong></li>
+                <pre><code>git clone https://github.com/ahearndylan/ClarkFoodWasteApp.git
+cd ClarkFoodWasteApp</code></pre>
+                <li><strong>Install dependencies:</strong></li>
+                <pre><code>npm install</code></pre>
+                <li><strong>Run the application:</strong></li>
+                <pre><code>npm start</code></pre>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Project Structure Section -->
+    <section id="project-structure" class="py-5">
+        <div class="container">
+            <h4 class="mb-4">Project Structure</h4>
+            <p>The project is structured as follows:</p>
+            <ul>
+                <li><strong>src/:</strong> Contains the source code for the application, including the server and routes.</li>
+                <li><strong>public/:</strong> Contains static assets like CSS, JavaScript, and images.</li>
+                <li><strong>views/:</strong> Contains the HTML templates used to render the web pages.</li>
+                <li><strong>package.json:</strong> Lists the dependencies and scripts for running the application.</li>
+                <li><strong>Dockerfile:</strong> Defines the Docker image configuration for the project.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section id="contact-information" class="py-5">
+        <div class="container">
+            <h4 class="mb-4">Contact Information</h4>
+            <p>If you have any questions about this project or would like to discuss it further, please feel free to contact me:</p>
+            <ul>
+                <li><strong>Email:</strong> DAhearn@clarku.edu</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>Contact: DAhearn@clarku.edu | Follow me on [Social Media Links]</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

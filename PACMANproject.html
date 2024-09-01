@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man Game Project</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Overview Section -->
+    <section id="project-overview" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Pac-Man Game Project</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/PACMANproject.png" alt="Pac-Man Project" class="img-fluid centered-image" style="max-width: 60%; height:auto;">
+                </div>
+                <div class="col-md-6">
+                    <h4>Project Overview</h4>
+                    <p>This project involves developing a Pac-Man game using various algorithms like Depth-First Search (DFS) and A* to manipulate game logic. The project serves as both a practical application of algorithm theory and a demonstration of game development skills.</p>
+                    <p><strong>Technologies Used:</strong> Python, Pygame, DFS, A* Algorithm, Game Development.</p>
+                    <p><strong>GitHub Repository:</strong> <a href="https://github.com/ahearndylan/PacmanGame" target="_blank">View the project on GitHub</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Description Section -->
+    <section id="project-description" class="py-5 bg-light">
+        <div class="container">
+            <h4 class="mb-4">Project Description</h4>
+            <p>The Pac-Man game project is a software application developed to simulate the classic Pac-Man arcade game. The project explores the implementation of various search algorithms, such as Depth-First Search (DFS) and A*, to control the behavior of ghosts and optimize the gameplay experience.</p>
+            <p>This project not only showcases game development skills but also demonstrates the practical application of complex algorithms in a gaming environment.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h4 class="mb-4">Features</h4>
+            <p>The Pac-Man game includes several key features:</p>
+            <ul>
+                <li><strong>Classic Pac-Man Gameplay:</strong> Recreates the classic gameplay experience with Pac-Man navigating through a maze while avoiding ghosts.</li>
+                <li><strong>Algorithm-Driven AI:</strong> Uses Depth-First Search (DFS) and A* algorithms to control ghost behavior, providing a challenging AI for the player.</li>
+                <li><strong>Customizable Levels:</strong> Allows for the creation of custom levels with varying difficulty.</li>
+                <li><strong>High Score Tracking:</strong> Tracks and displays the highest scores achieved by players.</li>
+                <li><strong>Responsive Controls:</strong> Implements responsive keyboard controls for smooth gameplay.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Setup and Installation Section -->
+    <section id="setup-installation" class="py-5 bg-light">
+        <div class="container">
+            <h4 class="mb-4">Setup and Installation</h4>
+            <p>This section provides instructions on how to set up the Pac-Man game locally:</p>
+            <h5>Prerequisites</h5>
+            <ul>
+                <li>Python 3.x</li>
+                <li>Pygame</li>
+            </ul>
+            <h5>Setup Instructions</h5>
+            <ol>
+                <li><strong>Clone the repository:</strong></li>
+                <pre><code>git clone https://github.com/ahearndylan/PacmanGame.git
+cd PacmanGame</code></pre>
+                <li><strong>Install dependencies:</strong></li>
+                <pre><code>pip install -r requirements.txt</code></pre>
+                <li><strong>Run the game:</strong></li>
+                <pre><code>python pacman.py</code></pre>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Project Structure Section -->
+    <section id="project-structure" class="py-5">
+        <div class="container">
+            <h4 class="mb-4">Project Structure</h4>
+            <p>The project is structured as follows:</p>
+            <ul>
+                <li><strong>src/:</strong> Contains the source code for the game, including the main game loop and AI logic.</li>
+                <li><strong>assets/:</strong> Contains all game assets, such as images and sounds used in the game.</li>
+                <li><strong>levels/:</strong> Contains level design files that define the layout and difficulty of each level.</li>
+                <li><strong>requirements.txt:</strong> Lists the Python dependencies needed to run the game.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Algorithm Implementation Section -->
+    <section id="algorithm-implementation" class="py-5 bg-light">
+        <div class="container">
+            <h4 class="mb-4">Algorithm Implementation</h4>
+            <p>The Pac-Man game uses the following algorithms to enhance gameplay:</p>
+            <ul>
+                <li><strong>Depth-First Search (DFS):</strong> Used to generate maze paths and define the initial layout of the game levels.</li>
+                <li><strong>A* Algorithm:</strong> Implemented to control ghost movement, making them more intelligent and challenging for the player.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section id="contact-information" class="py-5">
+        <div class="container">
+            <h4 class="mb-4">Contact Information</h4>
+            <p>If you have any questions about this project or would like to discuss it further, please feel free to contact me:</p>
+            <ul>
+                <li><strong>Email:</strong> DAhearn@clarku.edu</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>Contact: DAhearn@clarku.edu | Follow me on [Social Media Links]</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

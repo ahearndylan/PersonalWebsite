@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IVOC Nonprofit Website Project</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Overview Section -->
+    <section id="project-overview" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">IVOC Nonprofit Website Project</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/IVOCproject.png" alt="IVOC Project" class="img-fluid centered-image" style="max-width: 60%; height:auto;">
+                </div>
+                <div class="col-md-6">
+                    <h4>Project Overview</h4>
+                    <p>I developed and maintained a Django-based website for the IVOC nonprofit organization, enhancing online engagement and streamlining operations. This project was part of an internship for which I received the Barth Internship Award.</p>
+                    <p><strong>Award Received:</strong> Barth Internship Award</p>
+                    <p><strong>Technologies Used:</strong> Django, Python, HTML, CSS, JavaScript, NGINX, Docker, Git.</p>
+                    <p><strong>GitHub Repository:</strong> <a href="https://github.com/ahearndylan/IVOC" target="_blank">View the project on GitHub</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Description Section -->
+    <section id="project-description" class="py-5 bg-light">
+        <div class="container">
+            <h4 class="mb-4">Project Description</h4>
+            <p>This project is a web application developed for the IVOC nonprofit organization. The website aims to provide information about the organization, its services, and how to get involved. The main features of the website include:</p>
+            <ul>
+                <li>Information about IVOC and its mission</li>
+                <li>Details about services offered</li>
+                <li>Online donation functionality</li>
+                <li>User registration and login</li>
+                <li>Photo gallery and media content</li>
+                <li>Contact and connect with the organization</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h4 class="mb-4">Features</h4>
+            <p>The IVOC website includes several key features that were essential in meeting the organization’s needs:</p>
+            <ul>
+                <li><strong>User-Friendly Interface:</strong> The site was designed with a user-friendly interface to ensure accessibility for all visitors.</li>
+                <li><strong>Responsive Design:</strong> The website is fully responsive, ensuring it works well on both desktop and mobile devices.</li>
+                <li><strong>Secure User Registration:</strong> Secure user registration and login functionality was implemented using Django’s built-in authentication system.</li>
+                <li><strong>Online Donations:</strong> Integrated an online donation system to facilitate contributions to the nonprofit.</li>
+                <li><strong>Media Gallery:</strong> A photo gallery and media content section were included to showcase the organization’s activities.</li>
+                <li><strong>Contact Form:</strong> A contact form was implemented to allow visitors to easily connect with the organization.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Setup and Installation Section -->
+    <section id="setup-installation" class="py-5 bg-light">
+        <div class="container">
+            <h4 class="mb-4">Setup and Installation</h4>
+            <p>This section provides instructions on how to set up the IVOC website locally using Docker:</p>
+            <h5>Prerequisites</h5>
+            <ul>
+                <li>Docker</li>
+                <li>Python</li>
+                <li>Django</li>
+            </ul>
+            <h5>Setup Instructions</h5>
+            <ol>
+                <li><strong>Clone the repository:</strong></li>
+                <pre><code>git clone https://github.com/ahearndylan/IVOC.git
+cd IVOC</code></pre>
+                <li><strong>Build and start the Docker containers:</strong></li>
+                <pre><code>docker-compose up -d</code></pre>
+                <li><strong>Apply migrations:</strong></li>
+                <pre><code>docker-compose exec web python manage.py migrate</code></pre>
+                <li><strong>Create a superuser:</strong></li>
+                <pre><code>docker-compose exec web python manage.py createsuperuser</code></pre>
+            </ol>
+            <h5>Usage</h5>
+            <p><strong>Running the Development Server:</strong></p>
+            <ol>
+                <li>Start the server:</li>
+                <pre><code>docker-compose up</code></pre>
+                <li>Open your web browser and navigate to <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a></li>
+            </ol>
+            <p><strong>Accessing the Admin Interface:</strong></p>
+            <ol>
+                <li>Navigate to <a href="http://127.0.0.1:8000/admin" target="_blank">http://127.0.0.1:8000/admin</a></li>
+                <li>Log in with the superuser credentials you created.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Project Structure Section -->
+    <section id="project-structure" class="py-5">
+        <div class="container">
+            <h4 class="mb-4">Project Structure</h4>
+            <p>The project is structured as follows:</p>
+            <ul>
+                <li><strong>app/:</strong> Contains the Django applications.</li>
+                <li><strong>static/:</strong> Contains static files such as CSS, JavaScript, and images.</li>
+                <li><strong>templates/:</strong> Contains HTML templates.</li>
+                <li><strong>docker-compose.yml:</strong> Docker Compose configuration file.</li>
+                <li><strong>Dockerfile:</strong> Docker configuration file for building the project image.</li>
+                <li><strong>manage.py:</strong> Django’s command-line utility for administrative tasks.</li>
+                <li><strong>requirements.txt:</strong> Lists the Python dependencies.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- External Dependencies Section -->
+    <section id="external-dependencies" class="py-5 bg-light">
+        <div class="container">
+            <h4 class="mb-4">External Dependencies</h4>
+            <p>The project uses the following external CSS and JavaScript libraries:</p>
+            <h5>CSS</h5>
+            <ul>
+                <li>Django Static Files:</li>
+                <pre><code>&lt;link rel="stylesheet" href="{% static 'css/base.css' %}"&gt;
+&lt;link rel="stylesheet" href="{% static 'css/style.css' %}"&gt;</code></pre>
+                <li>Bootstrap CSS:</li>
+                <pre><code>&lt;link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"&gt;</code></pre>
+                <li>Bootstrap Icons:</li>
+                <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"&gt;</code></pre>
+                <li>Google Fonts:</li>
+                <pre><code>&lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"&gt;</code></pre>
+            </ul>
+            <h5>JavaScript</h5>
+            <ul>
+                <li>jQuery:</li>
+                <pre><code>&lt;script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"&gt;&lt;/script&gt;</code></pre>
+                <li>Popper.js:</li>
+                <pre><code>&lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"&gt;&lt;/script&gt;</code></pre>
+                <li>Bootstrap JS:</li>
+                <pre><code>&lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"&gt;&lt;/script&gt;</code></pre>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section id="contact-information" class="py-5">
+        <div class="container">
+            <h4 class="mb-4">Contact Information</h4>
+            <p>If you have any questions about this project or would like to discuss it further, please feel free to contact me:</p>
+            <ul>
+                <li><strong>Email:</strong> DAhearn@clarku.edu</li>
+                <li><strong>IVOC Nonprofit:</strong> Worcester, MA</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>Contact: DAhearn@clarku.edu | Follow me on [Social Media Links]</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
