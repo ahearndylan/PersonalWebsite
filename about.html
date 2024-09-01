@@ -7,8 +7,85 @@
     <title>About Me</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+body {
+    background-color: #dddedf; /* Light gray for a clean look */
+    color: #333333; /* Darker text color for contrast */
+}
+        .headshot {
+            width: 150px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 4px solid #fff;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-header {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .about-header h2 {
+            margin-top: 10px;
+            font-size: 2rem;
+        }
+
+        .about-header p {
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+
+        .about-section {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .skill {
+            margin-bottom: 15px;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background-color: #28a745;
+        }
+
+        .testimonial {
+            font-style: italic;
+            border-left: 4px solid #6c757d;
+            padding-left: 10px;
+            margin-top: 20px;
+            color: #6c757d;
+        }
+
+        footer .fa-linkedin,
+        footer .fa-github {
+            transition: color 0.3s ease;
+        }
+
+        footer .fa-linkedin:hover {
+            color: #0e76a8;
+        }
+
+        footer .fa-github:hover {
+            color: #333;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,25 +119,54 @@
         </div>
     </nav>
 
-    <!-- About Me Section -->
-    <section id="about" class="py-5">
+    <!-- About Header -->
+    <section class="about-header">
         <div class="container">
-            <h2 class="text-center mb-5">About Me</h2>
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <h3 class="mb-3">Background</h3>
-                    <p>[Your background details]</p>
-                    <h3 class="mb-3">Skills</h3>
-                    <p>[Your skills]</p>
-                </div>
-            </div>
+            <img src="images/headshot.png" alt="Your Headshot" class="headshot">
+            <h2>Dylan Ahearn</h2>
+            <p>Computer Science Student at Clark University</p>
+            <img src="images/ClarkU.png" style="max-width: 10%;">
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about-section">
+        <div class="container">
+            <h3 class="section-title">Background</h3>
+            <p class="section-content">
+                I'm currently pursuing a Bachelor of Arts in Computer Science at Clark University, where I've been honing my skills in software engineering, web development, and database systems. My academic journey has been complemented by hands-on projects, which have allowed me to apply theoretical knowledge in real-world scenarios. Before attending Clark, I was a student-athlete at Slippery Rock University, studying and playing basketball at the NCAA Division-2 level. Slippery Rock is where I found my interest in software engineering and developed a strong foundation in advanced programming principles.
+            </p>
+
+            <h3 class="section-title">Work Experience</h3>
+            <p class="section-content">
+                My professional experience includes developing a Django-based website for the nonprofit organization Inner Voice Outer Change (IVOC) in Worcester, MA. I managed the full lifecycle of the project, from requirements gathering and design to deployment, ensuring that the platform met the organization's needs. I've also contributed to collaborative software projects with my advisor as part of the Clark University Software Team, where I've tackled real-world challenges across various stages of the software development lifecycle.
+            </p>
+
+            <p class="section-content">
+            As a student pursuing a degree in Computer Science at Clark University, I am enthusiastic about applying the skills and knowledge I have acquired in a dynamic and innovative environment. During my academic career, I have developed a solid foundation in software engineering principles, while getting to practice and experience various programming languages. My coursework has been complemented by hands-on projects that require creative problem-solving and collaboration. While working on completing this degree, I have gained knowledge of becoming a successful computer engineer. This experience not only honed my technical skills but also taught me the importance of adapting to changing requirements and working effectively within a team.
+            </p>
+
+           
+
+            <h3 class="section-title">Let's Connect</h3>
+            <p class="section-content">
+                If you're interested in collaborating or have any questions, feel free to <a href="contact.html">contact me</a>.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
-            <p>Contact: [Your Email] | Follow me on [Social Media Links]</p>
+            <p>Contact: dahearn2021@gmail.com</p>
+            <p>
+                <a href="https://www.linkedin.com/in/dylan-ahearn-b58235236/" target="_blank" class="text-white mx-2">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/ahearndylan" target="_blank" class="text-white mx-2">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </p>
         </div>
     </footer>
 

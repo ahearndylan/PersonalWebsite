@@ -7,8 +7,116 @@
     <title>My Portfolio</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .tv-frame {
+    background: url('images/TV1.png') no-repeat center center;
+    background-size: cover; /* Make the TV image cover the entire area */
+    width: 600px; /* Adjust the width to match the TV's aspect ratio */
+    height: 600px; /* Adjust the height accordingly */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1em; /* Adjust font size if necessary */
+    text-align: center;
+    padding: 30px;
+    padding-bottom: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    overflow: hidden; /* Ensure text doesn't overflow the TV */
+}
+
+.tv-frame div {
+    max-width: 50%; /* Ensures the text doesn't take up the entire width */
+    text-align: center; /* Centers the text inside the TV frame */
+    margin: 0 auto;
+}
+        .hero-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000; /* Complements the retro TV look */
+        }
+
+        .hero-section h1, .hero-section p {
+            margin: 0;
+        }
+
+        .welcome-message {
+    position: absolute;
+    top: 10%; /* Adjusts the position above the TV frame */
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: #ffffff; /* Starting color */
+    animation: subtleColorFlip 6s ease-in-out infinite;
+    padding-top: 20px;
+}
+
+@keyframes subtleColorFlip {
+    0% {
+        color: #ffffff; /* White */
+        text-shadow: 0 0 5px #ffffff;
+    }
+    25% {
+        color: #d4af37; /* Gold */
+        text-shadow: 0 0 5px #d4af37;
+    }
+    50% {
+        color: #4682b4; /* Steel Blue */
+        text-shadow: 0 0 5px #4682b4;
+    }
+    75% {
+        color: #708090; /* Slate Gray */
+        text-shadow: 0 0 5px #708090;
+    }
+    100% {
+        color: #ffffff; /* White */
+        text-shadow: 0 0 5px #ffffff;
+    }
+}
+
+.explore-button {
+    text-align: center;
+    background-color: #000;
+    padding-bottom: 35px;
+}
+
+.explore-button .btn {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #4682b4; /* Steel Blue for a professional look */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.explore-button .btn:hover {
+    background-color: #99d2fb; /* Gold on hover for a subtle effect */
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+footer .fa-linkedin, footer .fa-github {
+    transition: color 0.3s ease;
+}
+
+footer .fa-linkedin:hover {
+    color: #0e76a8; /* LinkedIn color */
+}
+
+footer .fa-github:hover {
+    color: #333; /* GitHub color */
+}
+
+    </style>
 </head>
 
 <body>
@@ -42,41 +150,34 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero-section text-white text-center d-flex align-items-center" style="background-image: url('hero-bg.jpg'); height: 100vh; background-size: cover;">
-        <div class="container">
-            <h1 class="display-4">Welcome to My Portfolio</h1>
-            <p class="lead">Hi, I’m [Your Name], a [Your Profession] specializing in [Your Skills].</p>
-            <a href="#projects" class="btn btn-primary mt-4">Explore My Work</a>
+    <!-- Hero Section with TV -->
+    <header class="hero-section">
+        <div class="welcome-message">
+            <h1>Welcome!</h1>
+        </div>
+        <div class="tv-frame">
+            <div>
+                <p>I'm Dylan Ahearn, a Computer Science student at Clark University, set to graduate in Spring 2025. Based in Worcester, MA, I’m passionate about using my technical skills and teamwork to make an impact in software development and data analysis. Feel free to explore my site and connect with me!</p>
+            </div>
         </div>
     </header>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Featured Projects</h2>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="project1.jpg" alt="Project 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Project Title 1</h5>
-                            <p class="card-text">Short description of the project.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="project1.html" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Additional project cards can be added here -->
-            </div>
-        </div>
-    </section>
+    <div class="explore-button">
+        <a href="portfolio.html" class="btn btn-primary btn-lg">Explore My Projects</a>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
-            <p>Contact: [Your Email] | Follow me on [Social Media Links]</p>
+            <p>Contact: dahearn2021@gmail.com</p>
+            <p>
+                <a href="https://www.linkedin.com/in/dylan-ahearn-b58235236/" target="_blank" class="text-white mx-2">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/ahearndylan" target="_blank" class="text-white mx-2">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </p>
         </div>
     </footer>
 

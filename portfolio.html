@@ -7,8 +7,29 @@
     <title>Portfolio</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+    background-color: #dddedf; /* Light gray for a clean look */
+    color: #333333; /* Darker text color for contrast */
+}
+
+footer .fa-linkedin, footer .fa-github {
+    transition: color 0.3s ease;
+}
+
+footer .fa-linkedin:hover {
+    color: #0e76a8; /* LinkedIn color */
+}
+
+footer .fa-github:hover {
+    color: #333; /* GitHub color */
+}
+
+    </style>
 </head>
 
 <body>
@@ -68,7 +89,7 @@
                         <img class="card-img-top" src="images/PACMANproject.png" alt="Pac-Man Project" style="width:70%; height:auto; display:block; margin-left:auto; margin-right:auto; padding-top: 5%;">
                         <div class="card-body">
                             <h5 class="card-title">Pac-Man Game</h5>
-                            <p class="card-text">Developed a Pac-Man game using DFS and A* algorithms to simulate intelligent ghost behavior and provide an engaging gameplay experience.</p>
+                            <p class="card-text">Developed a Pac-Man game using various algorithms to simulate intelligent behavior and provide an engaging gameplay experience.</p>
                             <p class="card-text"><strong>Technologies Used:</strong> Python, Pygame, DFS, A* Algorithm, Game Development.</p>
                         </div>
                         <div class="card-footer">
@@ -83,7 +104,7 @@
                         <img class="card-img-top centered-image" src="images/FOODWASTEproject.png" alt="Food Waste Project" style="width:90%; height:auto; display:block; margin-left:auto; margin-right:auto; padding-top: 25%; padding-bottom: 25%;">
                         <div class="card-body">
                             <h5 class="card-title">Sustainable Food Waste Reduction App</h5>
-                            <p class="card-text">Participated in a hackathon to develop an app that logs and tracks food waste at Clark University, providing actionable insights for reducing waste.</p>
+                            <p class="card-text">Participated in a hackathon to develop an app that logs and tracks food waste at Clark University, providing actionable insights for reducing waste and promote sustainability.</p>
                             <p class="card-text"><strong>Technologies Used:</strong> ExpressJS, MongoDB, JavaScript, HTML, CSS.</p>
                         </div>
                         <div class="card-footer">
@@ -116,7 +137,15 @@
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
-            <p>Contact: [Your Email] | Follow me on [Social Media Links]</p>
+            <p>Contact: dahearn2021@gmail.com</p>
+            <p>
+                <a href="https://www.linkedin.com/in/dylan-ahearn-b58235236/" target="_blank" class="text-white mx-2">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/ahearndylan" target="_blank" class="text-white mx-2">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </p>
         </div>
     </footer>
 
