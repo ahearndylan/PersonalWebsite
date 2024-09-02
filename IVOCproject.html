@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IVOC Nonprofit Website Project</title>
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 
     <style>
@@ -17,17 +15,24 @@
         }
 
         footer .fa-linkedin:hover {
-            color: #0e76a8; /* LinkedIn color */
+            color: #0e76a8;
         }
 
         footer .fa-github:hover {
-            color: #333; /* GitHub color */
+            color: #333; 
+        }
+
+        @media (max-width: 430px){
+            .centered-image {
+                display: flex;
+                justify-content: center;
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
 
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">My Portfolio</a>
@@ -57,7 +62,6 @@
         </div>
     </nav>
 
-    <!-- Project Overview Section -->
     <section id="project-overview" class="py-5" style="background-color: #dddedf">
         <div class="container">
             <h2 class="text-center mb-4">IVOC Nonprofit Website Project</h2>
@@ -76,7 +80,6 @@
         </div>
     </section>
 
-    <!-- Project Description Section -->
     <section id="project-description" class="py-5 bg-light">
         <div class="container">
             <h4 class="mb-4">Project Description</h4>
@@ -93,7 +96,6 @@
         </div>
     </section>
 
-    <!-- Features Section -->
     <section id="features" class="py-5" style="background-color: #dddedf">
         <div class="container">
             <h4 class="mb-4">Features</h4>
@@ -103,13 +105,11 @@
                 <li><strong>Responsive Design:</strong> The website is fully responsive, ensuring it works well on both desktop and mobile devices.</li>
                 <li><strong>Secure User Registration:</strong> Secure user registration and login functionality was implemented using Django’s built-in authentication system.</li>
                 <li><strong>Online Donations:</strong> Integrated an online donation system to facilitate contributions to the nonprofit.</li>
-                <li><strong>Media Gallery:</strong> A photo gallery and media content section were included to showcase the organization’s activities.</li>
                 <li><strong>Contact Form:</strong> A contact form was implemented to allow visitors to easily connect with the organization.</li>
             </ul>
         </div>
     </section>
 
-    <!-- Setup and Installation Section -->
     <section id="setup-installation" class="py-5 bg-light">
         <div class="container">
             <h4 class="mb-4">Setup and Installation</h4>
@@ -147,7 +147,6 @@ cd IVOC</code></pre>
         </div>
     </section>
 
-    <!-- Project Structure Section -->
     <section id="project-structure" class="py-5" style="background-color: #dddedf">
         <div class="container">
             <h4 class="mb-4">Project Structure</h4>
@@ -164,7 +163,6 @@ cd IVOC</code></pre>
         </div>
     </section>
 
-    <!-- External Dependencies Section -->
     <section id="external-dependencies" class="py-5 bg-light">
         <div class="container">
             <h4 class="mb-4">External Dependencies</h4>
@@ -193,19 +191,16 @@ cd IVOC</code></pre>
         </div>
     </section>
 
-    <!-- Contact Information Section -->
     <section id="contact-information" class="py-5" style="background-color: #dddedf">
         <div class="container">
             <h4 class="mb-4">Contact Information</h4>
             <p>If you have any questions about this project or would like to discuss it further, please feel free to contact me:</p>
             <ul>
                 <li><strong>Email:</strong> DAhearn@clarku.edu</li>
-                <li><strong>IVOC Nonprofit:</strong> Worcester, MA</li>
             </ul>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
             <p>Contact: dahearn2021@gmail.com</p>
@@ -220,7 +215,6 @@ cd IVOC</code></pre>
         </div>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

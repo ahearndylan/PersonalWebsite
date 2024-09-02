@@ -5,35 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 
     <style>
         body {
-    background-color: #dddedf; /* Light gray for a clean look */
-    color: #333333; /* Darker text color for contrast */
-}
+            background-color: #dddedf; 
+            color: #333333;
+        }
 
-footer .fa-linkedin, footer .fa-github {
-    transition: color 0.3s ease;
-}
+        footer .fa-linkedin, footer .fa-github {
+            transition: color 0.3s ease;
+        }
 
-footer .fa-linkedin:hover {
-    color: #0e76a8; /* LinkedIn color */
-}
+        footer .fa-linkedin:hover {
+            color: #0e76a8; 
+        }
 
-footer .fa-github:hover {
-    color: #333; /* GitHub color */
-}
-
+        footer .fa-github:hover {
+            color: #333;
+        }
     </style>
 </head>
 
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">My Portfolio</a>
@@ -63,15 +59,13 @@ footer .fa-github:hover {
         </div>
     </nav>
 
-    <!-- Portfolio Section -->
     <section id="portfolio" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5">My Projects</h2>
             <div class="row">
-                <!-- IVOC Project Card -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-                        <img class="card-img-top centered-image" src="images/IVOCproject.png" alt="IVOC Project" style="width:90%; height:auto; display:block; margin-left:auto; margin-right:auto;">
+                        <img class="card-img-top centered-image" src="images/IVOCproject.png" alt="IVOC Project" style="width:80%; height:auto; display:block; margin-left:auto; margin-right:auto; padding-top: 70px; padding-bottom: 50px;">
                         <div class="card-body">
                             <h5 class="card-title">IVOC Nonprofit Website</h5>
                             <p class="card-text">Developed and maintained a Django-based website for a nonprofit organization, enhancing online engagement and streamlining operations.</p>
@@ -83,13 +77,12 @@ footer .fa-github:hover {
                     </div>
                 </div>
 
-                <!-- Pac-Man Project Card -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-                        <img class="card-img-top" src="images/PACMANproject.png" alt="Pac-Man Project" style="width:70%; height:auto; display:block; margin-left:auto; margin-right:auto; padding-top: 5%;">
+                        <img class="card-img-top" src="images/PACMANgif.gif" alt="Pac-Man Project" style="width:60%; height:auto; display:block; margin-left:auto; margin-right:auto; padding-top: 30px; padding-bottom: 20px;">
                         <div class="card-body">
                             <h5 class="card-title">Pac-Man Game</h5>
-                            <p class="card-text">Developed a Pac-Man game using various algorithms to simulate intelligent behavior and provide an engaging gameplay experience.</p>
+                            <p class="card-text">Developed a Pac-Man game using various algorithms to simulate intelligent behavior throughout the game and provide an engaging gameplay experience.</p>
                             <p class="card-text"><strong>Technologies Used:</strong> Python, Pygame, DFS, A* Algorithm, Game Development.</p>
                         </div>
                         <div class="card-footer">
@@ -98,7 +91,6 @@ footer .fa-github:hover {
                     </div>
                 </div>
 
-                <!-- Food Waste Reduction Project Card -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
                         <img class="card-img-top centered-image" src="images/FOODWASTEproject.png" alt="Food Waste Project" style="width:90%; height:auto; display:block; margin-left:auto; margin-right:auto; padding-top: 25%; padding-bottom: 25%;">
@@ -113,10 +105,9 @@ footer .fa-github:hover {
                     </div>
                 </div>
 
-                <!-- Digital Bar Card Project Card -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-                        <img class="card-img-top centered-image" src="images/BARCARDproject.jpg" alt="Digital Bar Card Project" style="width:100%; height:auto;">
+                        <img class="card-img-top centered-image" src="images/BARCARDproject.png" alt="Digital Bar Card Project" style="width:70%; height:auto; display:block; margin-left:auto; margin-right:auto;">
                         <div class="card-body">
                             <h5 class="card-title">Digital Bar Card Project</h5>
                             <p class="card-text">A Django-based project aiming to replace traditional paper-based Bar Cards for Massachusetts lawyers with digital versions, stored on mobile devices for easy verification.</p>
@@ -128,13 +119,10 @@ footer .fa-github:hover {
                     </div>
                 </div>
 
-                <!-- Additional project cards can be added here -->
-
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
             <p>Contact: dahearn2021@gmail.com</p>
@@ -149,7 +137,6 @@ footer .fa-github:hover {
         </div>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

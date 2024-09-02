@@ -5,18 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 
     <style>
+        body {
+            background-color: #dddedf;
+            color: #333333;
+        }
 
-body {
-    background-color: #dddedf; /* Light gray for a clean look */
-    color: #333333; /* Darker text color for contrast */
-}
         .headshot {
             width: 150px;
             height: auto;
@@ -41,36 +39,34 @@ body {
             color: #6c757d;
         }
 
-        .about-section {
-            padding: 50px 0;
+        .card {
+            margin-bottom: 20px;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 1.8rem;
-            margin-bottom: 30px;
+        .card-header {
+            background-color: #6c757d;
+            color: white;
+            cursor: pointer;
+            padding: 0;
         }
 
-        .section-content {
+        .card-header button {
+            width: 100%;
+            background: none;
+            border: none;
+            color: white;
+            text-align: left;
+            padding: 15px;
+            font-size: 1.25rem;
+        }
+
+        .card-header button:hover {
+            background-color: #5a6268;
+        }
+
+        .card-body {
             font-size: 1.1rem;
             line-height: 1.6;
-        }
-
-        .skill {
-            margin-bottom: 15px;
-        }
-
-        .progress-bar {
-            height: 8px;
-            background-color: #28a745;
-        }
-
-        .testimonial {
-            font-style: italic;
-            border-left: 4px solid #6c757d;
-            padding-left: 10px;
-            margin-top: 20px;
-            color: #6c757d;
         }
 
         footer .fa-linkedin,
@@ -85,11 +81,38 @@ body {
         footer .fa-github:hover {
             color: #333;
         }
+
+        .btn-custom {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #555555;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .clarklogo{
+            max-width: 10%;
+        }
+
+        @media (max-width: 430px){
+            .clarklogo{
+                max-width: 30%;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">My Portfolio</a>
@@ -119,43 +142,78 @@ body {
         </div>
     </nav>
 
-    <!-- About Header -->
     <section class="about-header">
         <div class="container">
             <img src="images/headshot.png" alt="Your Headshot" class="headshot">
             <h2>Dylan Ahearn</h2>
             <p>Computer Science Student at Clark University</p>
-            <img src="images/ClarkU.png" style="max-width: 10%;">
+            <img src="images/ClarkU.png" class="clarklogo">
         </div>
     </section>
+    <br>
+    <br>
 
-    <!-- About Me Section -->
     <section class="about-section">
         <div class="container">
-            <h3 class="section-title">Background</h3>
-            <p class="section-content">
-                I'm currently pursuing a Bachelor of Arts in Computer Science at Clark University, where I've been honing my skills in software engineering, web development, and database systems. My academic journey has been complemented by hands-on projects, which have allowed me to apply theoretical knowledge in real-world scenarios. Before attending Clark, I was a student-athlete at Slippery Rock University, studying and playing basketball at the NCAA Division-2 level. Slippery Rock is where I found my interest in software engineering and developed a strong foundation in advanced programming principles.
-            </p>
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingBackground">
+                        <button class="collapsed" data-toggle="collapse" data-target="#collapseBackground" aria-expanded="true" aria-controls="collapseBackground">
+                            Background
+                        </button>
+                    </div>
+                    <div id="collapseBackground" class="collapse show" aria-labelledby="headingBackground" data-parent="#accordion">
+                        <div class="card-body">
+                            I'm currently pursuing a Bachelor of Arts in Computer Science at Clark University, where I've been honing my skills in software engineering, web development, and database systems. My academic journey has been complemented by hands-on projects, which have allowed me to apply theoretical knowledge in real-world scenarios. Before attending Clark, I was a student-athlete at Slippery Rock University, studying and playing basketball at the NCAA Division-2 level. Slippery Rock is where I found my interest in software engineering and developed a strong foundation in advanced programming principles.
+                        </div>
+                    </div>
+                </div>
 
-            <h3 class="section-title">Work Experience</h3>
-            <p class="section-content">
-                My professional experience includes developing a Django-based website for the nonprofit organization Inner Voice Outer Change (IVOC) in Worcester, MA. I managed the full lifecycle of the project, from requirements gathering and design to deployment, ensuring that the platform met the organization's needs. I've also contributed to collaborative software projects with my advisor as part of the Clark University Software Team, where I've tackled real-world challenges across various stages of the software development lifecycle.
-            </p>
+                <div class="card">
+                    <div class="card-header" id="headingExperience">
+                        <button class="collapsed" data-toggle="collapse" data-target="#collapseExperience" aria-expanded="false" aria-controls="collapseExperience">
+                            Work Experience
+                        </button>
+                    </div>
+                    <div id="collapseExperience" class="collapse" aria-labelledby="headingExperience" data-parent="#accordion">
+                        <div class="card-body">
+                            My professional experience includes developing a Django-based website for the nonprofit organization Inner Voice Outer Change (IVOC) in Worcester, MA. I managed the full lifecycle of the project, from requirements gathering and design to deployment, ensuring that the platform met the organization's needs. I've also contributed to collaborative software projects with my advisor as part of the Clark University Software Team, where I've tackled real-world challenges across various stages of the software development lifecycle.
+                        </div>
+                    </div>
+                </div>
 
-            <p class="section-content">
-            As a student pursuing a degree in Computer Science at Clark University, I am enthusiastic about applying the skills and knowledge I have acquired in a dynamic and innovative environment. During my academic career, I have developed a solid foundation in software engineering principles, while getting to practice and experience various programming languages. My coursework has been complemented by hands-on projects that require creative problem-solving and collaboration. While working on completing this degree, I have gained knowledge of becoming a successful computer engineer. This experience not only honed my technical skills but also taught me the importance of adapting to changing requirements and working effectively within a team.
-            </p>
+                <div class="card">
+                    <div class="card-header" id="headingSkills">
+                        <button class="collapsed" data-toggle="collapse" data-target="#collapseSkills" aria-expanded="false" aria-controls="collapseSkills">
+                            Skills
+                        </button>
+                    </div>
+                    <div id="collapseSkills" class="collapse" aria-labelledby="headingSkills" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>As a student pursuing a degree in Computer Science at Clark University, I am enthusiastic about applying the skills and knowledge I have acquired in a dynamic and innovative environment. During my academic career, I have developed a solid foundation in software engineering principles, while getting to practice and experience various programming languages. My coursework has been complemented by hands-on projects that require creative problem-solving and collaboration. While working on completing this degree, I have gained knowledge of becoming a successful computer engineer. This experience not only honed my technical skills but also taught me the importance of adapting to changing requirements and working effectively within a team.</p>
+                            <p>Python, Django, JavaScript, HTML/CSS, SQL, Git, Agile methodologies, and more.</p>
+                            <a href="portfolio.html" class="btn btn-custom mt-3">Explore My Projects</a>
+                        </div>
+                    </div>
+                </div>
 
-           
+                <div class="card">
+                    <div class="card-header" id="headingConnect">
+                        <button class="collapsed" data-toggle="collapse" data-target="#collapseConnect" aria-expanded="false" aria-controls="collapseConnect">
+                            Let's Connect
+                        </button>
+                    </div>
+                    <div id="collapseConnect" class="collapse" aria-labelledby="headingConnect" data-parent="#accordion">
+                        <div class="card-body">
+                            If you're interested in collaborating or have any questions, feel free to <a href="contact.html">contact me</a>.
+                        </div>
+                    </div>
+                </div>
 
-            <h3 class="section-title">Let's Connect</h3>
-            <p class="section-content">
-                If you're interested in collaborating or have any questions, feel free to <a href="contact.html">contact me</a>.
-            </p>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
             <p>Contact: dahearn2021@gmail.com</p>
@@ -170,7 +228,6 @@ body {
         </div>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

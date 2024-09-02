@@ -5,28 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pac-Man Game Project</title>
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <style>
-        footer .fa-linkedin, footer .fa-github {
+        footer .fa-linkedin,
+        footer .fa-github {
             transition: color 0.3s ease;
         }
 
         footer .fa-linkedin:hover {
-            color: #0e76a8; /* LinkedIn color */
+            color: #0e76a8;
         }
 
         footer .fa-github:hover {
-            color: #333; /* GitHub color */
+            color: #333;
+        }
+
+        .pacman-gif-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .pacman-gif {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 430px){
+            .pacman-gif {
+                margin-bottom: 40px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">My Portfolio</a>
@@ -56,17 +74,16 @@
         </div>
     </nav>
 
-    <!-- Project Overview Section -->
     <section id="project-overview" class="py-5" style="background-color: #dddedf">
         <div class="container">
             <h2 class="text-center mb-4">Pac-Man Game Project</h2>
             <div class="row">
-                <div class="col-md-6">
-                    <img src="images/PACMANproject.png" alt="Pac-Man Project" class="img-fluid centered-image" style="max-width: 60%; height:auto;">
+                <div class="col-md-6 pacman-gif-container">
+                    <img src="images/PACMANgif.gif" alt="Pac-Man Gameplay GIF" class="pacman-gif">
                 </div>
                 <div class="col-md-6">
                     <h4>Project Overview</h4>
-                    <p>This project involves developing a Pac-Man game using various algorithms like Depth-First Search (DFS) and A* to manipulate game logic. The project serves as both a practical application of algorithm theory and a demonstration of game development skills.</p>
+                    <p>This project involves developing a Pac-Man game using various algorithms like Depth-First Search (DFS), A*, and Dijkstra's to manipulate game logic. The project serves as both a practical application of algorithm theory and a demonstration of game development skills.</p>
                     <p><strong>Technologies Used:</strong> Python, Pygame, DFS, Dijkstra's, A* Algorithm, Game Development.</p>
                     <p><strong>GitHub Repository:</strong> <a href="https://github.com/ahearndylan/PacmanGame" target="_blank">View the project on GitHub</a></p>
                 </div>
@@ -74,23 +91,21 @@
         </div>
     </section>
 
-    <!-- Project Description Section -->
     <section id="project-description" class="py-5 bg-light">
         <div class="container">
             <h4 class="mb-4">Project Description</h4>
-            <p>The Pac-Man game project is a software application developed to simulate the classic Pac-Man arcade game. The project explores the implementation of various search algorithms, such as Depth-First Search (DFS), Dijkstra's, and A*, to control the behavior of ghosts and optimize the gameplay experience.</p>
-            <p>This project not only showcases game development skills but also demonstrates the practical application of complex algorithms in a gaming environment.</p>
+            <p>The Pac-Man game project is a software application developed to simulate the classic Pac-Man arcade game. The project explores the implementation of various search algorithms, such as Depth-First Search (DFS), Dijkstra's, and A*, to control the behavior of PacMan and optimize the gameplay experience.</p>
+            <p>This project not only showcases game development skills but also demonstrates the practical application of complex algorithms in a gaming environment. The project tracks and compares the performance of each algorithm, intending to explore the performance of different ideas for traversal in Pac-Man.</p>
         </div>
     </section>
 
-    <!-- Features Section -->
     <section id="features" class="py-5" style="background-color: #dddedf">
         <div class="container">
             <h4 class="mb-4">Features</h4>
             <p>The Pac-Man game includes several key features:</p>
             <ul>
                 <li><strong>Classic Pac-Man Gameplay:</strong> Recreates the classic gameplay experience with Pac-Man navigating through a maze while avoiding ghosts.</li>
-                <li><strong>Algorithm-Driven AI:</strong> Uses Depth-First Search (DFS), Dijkstra and A* algorithms to control PacMan behavior, providing a challenge in AI to beat the game.</li>
+                <li><strong>Algorithm-Driven AI:</strong> Uses Depth-First Search (DFS), Dijkstra's, and A* algorithms to control Pac-Man's and the ghosts' behavior, providing a challenge in AI to beat the game.</li>
                 <li><strong>Customizable Levels:</strong> Allows for the creation of custom levels with varying difficulty.</li>
                 <li><strong>High Score Tracking:</strong> Tracks and displays the highest scores achieved by players.</li>
                 <li><strong>Responsive Controls:</strong> Implements responsive keyboard controls for smooth gameplay.</li>
@@ -98,8 +113,44 @@
         </div>
     </section>
 
-    <!-- Setup and Installation Section -->
-    <section id="setup-installation" class="py-5 bg-light">
+    <section id="algorithm-implementation" class="py-5 bg-light">
+        <div class="container">
+            <h4 class="mb-4">Algorithm Implementation</h4>
+            <p>The Pac-Man game uses the following algorithms to enhance gameplay:</p>
+            <ul>
+                <li><strong>Depth-First Search (DFS):</strong> Used to generate maze paths and define the initial layout of the game levels.</li>
+                <li><strong>A* Algorithm:</strong> Implemented to control ghost movement, making them more intelligent and challenging for the player.</li>
+                <li><strong>Dijkstra's Algorithm:</strong> Explored as an alternative method for ghost movement, though observed to be less effective as it often avoids pacgums and demonstrates less optimal behavior.</li>
+            </ul>
+            <p>Each algorithm's performance is tracked and compared to understand the strengths and weaknesses of different traversal methods. Observations include:</p>
+            <ul>
+                <li><strong>BFS (Breadth-First Search):</strong>
+                    <ul>
+                        <li>BFS to the nearest pacgum</li>
+                        <li>BFS to a random spot</li>
+                        <li>BFS to powerups then ghosts</li>
+                        <li>Observations: "Kinda smart, kinda dumb," sometimes slow, but capable of winning and earning extra lives.</li>
+                    </ul>
+                </li>
+                <li><strong>A* Algorithm:</strong>
+                    <ul>
+                        <li>A* to a random spot</li>
+                        <li>A* to powerups then ghosts</li>
+                        <li>Observations: Similar success rates as BFS, sometimes smart, sometimes dumb, and occasionally wins extra lives.</li>
+                    </ul>
+                </li>
+                <li><strong>Dijkstra's Algorithm:</strong>
+                    <ul>
+                        <li>Dijkstra to a random spot</li>
+                        <li>Observations: "Very dumb," prefers avoiding pacgums, with room for improvement.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Heuristics like Manhattan distance are used in the A* algorithm to determine the best path.</p>
+        </div>
+    </section>
+
+    <section id="setup-installation" class="py-5" style="background-color: #dddedf">
         <div class="container">
             <h4 class="mb-4">Setup and Installation</h4>
             <p>This section provides instructions on how to set up the Pac-Man game locally:</p>
@@ -121,8 +172,7 @@ cd PacmanGame</code></pre>
         </div>
     </section>
 
-    <!-- Project Structure Section -->
-    <section id="project-structure" class="py-5" style="background-color: #dddedf">
+    <section id="project-structure" class="py-5 bg-light">
         <div class="container">
             <h4 class="mb-4">Project Structure</h4>
             <p>The project is structured as follows:</p>
@@ -132,22 +182,15 @@ cd PacmanGame</code></pre>
                 <li><strong>levels/:</strong> Contains level design files that define the layout and difficulty of each level.</li>
                 <li><strong>requirements.txt:</strong> Lists the Python dependencies needed to run the game.</li>
             </ul>
-        </div>
-    </section>
-
-    <!-- Algorithm Implementation Section -->
-    <section id="algorithm-implementation" class="py-5 bg-light">
-        <div class="container">
-            <h4 class="mb-4">Algorithm Implementation</h4>
-            <p>The Pac-Man game uses the following algorithms to enhance gameplay:</p>
+            <p>The main class structure includes:</p>
             <ul>
-                <li><strong>Depth-First Search (DFS):</strong> Used to generate maze paths and define the initial layout of the game levels.</li>
-                <li><strong>A* Algorithm:</strong> Implemented to control ghost movement, making them more intelligent and challenging for the player.</li>
+                <li><strong>`game` field:</strong> Stores an instance of the game.</li>
+                <li><strong>`setup` method:</strong> Performs any pregame calculations.</li>
+                <li><strong>`get_dir` method:</strong> Returns the correct direction for the current game state.</li>
             </ul>
         </div>
     </section>
 
-    <!-- Contact Information Section -->
     <section id="contact-information" class="py-5" style="background-color: #dddedf">
         <div class="container">
             <h4 class="mb-4">Contact Information</h4>
@@ -158,7 +201,6 @@ cd PacmanGame</code></pre>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
             <p>Contact: dahearn2021@gmail.com</p>
@@ -173,7 +215,6 @@ cd PacmanGame</code></pre>
         </div>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
