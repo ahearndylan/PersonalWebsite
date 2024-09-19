@@ -72,19 +72,22 @@
                 </div>
                 <div class="col-md-6">
                     <h4>Project Overview</h4>
-                    <p>The Digital Bar Card project aims to replace traditional paper-based Bar Cards for Massachusetts lawyers with digital versions. These cards can be stored on mobile devices, such as Apple Wallet, and used for verification in court. The project integrates with the Massachusetts Board of Bar Overseers (BBO) database for lawyer verification.</p>
-                    <p><strong>Technologies Used:</strong> Django, Python, SQLite, HTML, CSS, JavaScript, Git.</p>
-                    <p><strong>Project Repository:</strong> <a href="https://github.com/ahearndylan/BarCardProject" target="_blank">View the project on GitHub</a></p>
+                    <p>The Digital Bar Card project simulates replacing traditional paper-based Bar Cards for Massachusetts lawyers with digital versions. This Proof of Concept (PoC) demonstrates how lawyers' credentials can be verified via a mock API, simulating interaction with the Massachusetts Board of Bar Overseers (BBO) database. Once verified, a digital Bar Card is generated and can be stored in mobile wallets like Apple Wallet or Google Wallet.</p>
+                    <p><strong>Technologies Used:</strong> Django, Python, SQLite (for development), PostgreSQL (planned for production), HTML, CSS, JavaScript, Git.</p>
+                    <p><strong>Hosted Project:</strong> <a href="https://digitalbarcard.onrender.com/" target="_blank">View the hosted project on Render</a></p>
+                    <p><strong>Project Repository:</strong> <a href="https://github.com/ahearndylan/DigitalBarCard" target="_blank">View the project on GitHub</a></p>
+                    <p><strong>Mock API Repository:</strong> <a href="https://github.com/ahearndylan/mockAPI" target="_blank">View the Mock API on GitHub</a></p>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <section id="project-description" class="py-5 bg-light">
         <div class="container">
             <h4 class="mb-4">Project Description</h4>
-            <p>This project is designed to streamline the process of verifying lawyers' credentials and providing them with a digital Bar Card. Currently, Massachusetts lawyers must submit their paperwork to the courthouse in person or online, and upon verification, they receive a paper Bar Card. This project aims to digitize this process, allowing lawyers to store their Bar Cards on their phones.</p>
-            <p>The Digital Bar Card includes a scannable code that can be used for real-time verification in court. The goal is to eventually eliminate the need for lawyers to carry both their Bar Card and their license by integrating their photo into the verification process.</p>
+            <p>The Digital Bar Card project aims to streamline the process of lawyer verification and Bar Card generation, eliminating the need for physical Bar Cards. The mock API simulates the Massachusetts Board of Bar Overseers (BBO) database, allowing lawyers to verify their credentials and generate a digital version of their Bar Card. These digital cards can be used in court for real-time verification via a scannable code.</p>
+            <p>The digital Bar Card includes information such as the lawyer’s name, law firm, BBO number, admittance date, expiration date, and lawyer’s electronic signature. In future updates, lawyers may be able to store their malpractice insurance details and pay Bar dues directly through the app.</p>
         </div>
     </section>
 
@@ -93,10 +96,17 @@
             <h4 class="mb-4">Key Features</h4>
             <p>The Digital Bar Card system includes several key features:</p>
             <ul>
-                <li><strong>User Registration & Authentication:</strong> General users can create accounts, while lawyers can verify their credentials via the BBO database.</li>
-                <li><strong>Digital Bar Card Generation:</strong> Verified lawyers can generate and store a digital Bar Card. Cards include a scannable code for real-time verification.</li>
-                <li><strong>Security & Logout:</strong> Includes secure logout functionality, redirecting users to the login screen.</li>
-                <li><strong>Future Enhancements:</strong> Plans to integrate a feature allowing lawyers to store their license photo, streamlining the court verification process.</li>
+                <li><strong>User Registration & Authentication:</strong> General users can create accounts, while lawyers can verify their credentials using a mock API.</li>
+                <li><strong>Digital Bar Card Generation:</strong> Verified lawyers can generate and store a digital Bar Card, which includes a scannable code for real-time courtroom verification.</li>
+                <li><strong>Security Features:</strong> Secured login sessions with automatic logout after inactivity, along with manual logout redirecting to the login page.</li>
+                <li><strong>Mock API Integration:</strong> The system uses a mock API to simulate the BBO database, with predefined users for testing. Example users include:
+                    <ul>
+                        <li>Robert Ahearn: Active, no public discipline, dues paid.</li>
+                        <li>Ashley Ahearn: Active, no public discipline, dues paid.</li>
+                        <li>John Glynn: Active, public discipline, dues paid.</li>
+                        <li>Timothy Smith: Active, no public discipline, dues not paid.</li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </section>
@@ -104,12 +114,12 @@
     <section id="project-structure" class="py-5 bg-light">
         <div class="container">
             <h4 class="mb-4">Project Structure</h4>
-            <p>The project is organized into several apps within the main Django project, ensuring modularity and ease of development:</p>
+            <p>The project is structured into several apps within the Django framework:</p>
             <ul>
-                <li><strong>Main Project (digital_bar_card/):</strong> Contains core Django settings and configurations.</li>
-                <li><strong>users/:</strong> Manages user registration, login, and profile management.</li>
-                <li><strong>bar_cards/:</strong> Handles Bar Card generation, storage, and presentation.</li>
-                <li><strong>verification/:</strong> Manages lawyer verification against the BBO database.</li>
+                <li><strong>Main Project (digital_bar_card/):</strong> Contains the core Django settings and configurations.</li>
+                <li><strong>users/:</strong> Manages user registration, login, and profiles.</li>
+                <li><strong>bar_cards/:</strong> Responsible for generating, storing, and managing the digital Bar Cards.</li>
+                <li><strong>verification/:</strong> Manages lawyer verification using the mock API.</li>
             </ul>
         </div>
     </section>
@@ -117,13 +127,13 @@
     <section id="development-process" class="py-5" style="background-color: #dddedf">
         <div class="container">
             <h4 class="mb-4">Development Process</h4>
-            <p>The development process for the Digital Bar Card project follows these steps:</p>
+            <p>The development process includes the following steps:</p>
             <ol>
                 <li>Set up Django apps for users, Bar Cards, and verification.</li>
-                <li>Implemented user authentication and lawyer verification.</li>
+                <li>Implemented user authentication and lawyer verification using a mock API.</li>
                 <li>Developed digital Bar Card generation and security features.</li>
-                <li>Version-controlled the project on GitHub with a .gitignore to exclude unnecessary files.</li>
-                <li>Continued development to integrate additional features, such as license photo storage and advanced verification methods.</li>
+                <li>Hosted the project on Render, with both the Digital Bar Card and Mock API available online.</li>
+                <li>Continued development, including future features like real-time lawyer verification, malpractice insurance tracking, and integration with Apple Wallet/Google Wallet.</li>
             </ol>
         </div>
     </section>
@@ -131,8 +141,8 @@
     <section id="expansion-plans" class="py-5 bg-light">
         <div class="container">
             <h4 class="mb-4">Expansion Plans</h4>
-            <p>While the current focus of the Digital Bar Card project is on Massachusetts lawyers, there are plans to expand the service to include lawyers from all U.S. states. This expansion will involve integrating with the respective Bar Overseers databases of each state to allow nationwide verification and digital Bar Card generation.</p>
-            <p>Future development phases will aim to provide a universal solution that simplifies the process of Bar Card issuance and verification for lawyers across the country, enhancing security and convenience in the legal profession.</p>
+            <p>The Digital Bar Card project is currently focused on Massachusetts lawyers, but there are plans to expand the service to other U.S. states. Each state may have different requirements, such as malpractice insurance verification, which can be incorporated into the system as it scales.</p>
+            <p>Future updates will also explore adding a one-stop payment system for Bar dues and direct integration with mobile wallets to ensure that lawyers no longer need a physical Bar Card or Wi-Fi to access their credentials.</p>
         </div>
     </section>
 
