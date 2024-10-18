@@ -57,9 +57,10 @@
         .coding-console {
             background-color: #1e272e;
             color: #00e640;
-            width: 80%;
+            width: 90%;
             max-width: 800px;
-            height: 250px;
+            min-height: 250px;
+            height: auto; 
             padding: 40px 20px 20px 20px; 
             font-family: monospace;
             font-size: 1em;
@@ -159,6 +160,22 @@
             0% { top: -100%; opacity: 0; }
             10% { opacity: 1; }
             100% { top: 100%; opacity: 0; }
+        }
+
+        @media (max-width: 600px) {
+            .coding-console {
+                width: 95%;
+                padding: 40px 20px 20px 20px; 
+                min-height: 300px;
+            }
+            
+            .welcome-message h1 {
+                font-size: 2em; 
+            }
+
+            .explore-button .btn {
+                font-size: 1em; 
+            }
         }
     </style>
 </head>
