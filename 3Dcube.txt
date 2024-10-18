@@ -60,7 +60,7 @@
             width: 80%;
             max-width: 800px;
             height: 250px;
-            padding: 40px 20px 20px 20px; 
+            padding: 40px 20px 20px 20px;
             font-family: monospace;
             font-size: 1em;
             border-radius: 5px;
@@ -70,7 +70,6 @@
             margin-top: 20px;
             position: relative;
         }
-
 
         .coding-console::before {
             content: "";
@@ -160,6 +159,48 @@
             10% { opacity: 1; }
             100% { top: 100%; opacity: 0; }
         }
+
+        /* 3D Cube */
+        .skills-cube {
+            perspective: 1000px;
+            margin-top: 40px;
+        }
+
+        .cube {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotateCube 8s infinite linear;
+        }
+
+        @keyframes rotateCube {
+            0% { transform: rotateX(0deg) rotateY(0deg); }
+            100% { transform: rotateX(360deg) rotateY(360deg); }
+        }
+
+        .cube-face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .cube-face:nth-child(1) { transform: rotateY(0deg) translateZ(100px); }
+        .cube-face:nth-child(2) { transform: rotateY(90deg) translateZ(100px); }
+        .cube-face:nth-child(3) { transform: rotateY(180deg) translateZ(100px); }
+        .cube-face:nth-child(4) { transform: rotateY(-90deg) translateZ(100px); }
+        .cube-face:nth-child(5) { transform: rotateX(90deg) translateZ(100px); }
+        .cube-face:nth-child(6) { transform: rotateX(-90deg) translateZ(100px); }
+
     </style>
 </head>
 
@@ -203,6 +244,18 @@
                 <div></div>
                 <div></div>
                 <div></div>
+            </div>
+        </div>
+
+        <!-- New 3D Skills Cube below the coding console -->
+        <div class="skills-cube">
+            <div class="cube">
+                <div class="cube-face">Python</div>
+                <div class="cube-face">Django</div>
+                <div class="cube-face">Docker</div>
+                <div class="cube-face">HTML/CSS</div>
+                <div class="cube-face">JavaScript</div>
+                <div class="cube-face">PostgreSQL</div>
             </div>
         </div>
 
@@ -268,6 +321,7 @@
             typeCharacter();
         }
 
+        // Fade out message lines
         function fadeOutConsole() {
             Array.from(document.getElementsByClassName('code-line')).forEach(line => {
                 line.style.opacity = '0';
@@ -277,13 +331,14 @@
 
         typeLine(consoleLines[currentLine]);
 
+        // Matrix effect
         function initMatrixEffect() {
             const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()';
             function createMatrixLine() {
                 const matrixLine = document.createElement('div');
                 matrixLine.classList.add('matrix-line');
                 matrixLine.style.left = Math.random() * consoleContainer.offsetWidth + 'px';
-                matrixLine.style.top = Math.random() * (consoleContainer.offsetHeight - 40) + 40 + 'px'; 
+                matrixLine.style.top = Math.random() * (consoleContainer.offsetHeight - 40) + 40 + 'px'; // Ensure it starts below the top bar
                 matrixLine.textContent = chars.charAt(Math.floor(Math.random() * chars.length));
                 consoleContainer.appendChild(matrixLine);
                 matrixLine.addEventListener('animationend', () => matrixLine.remove());
