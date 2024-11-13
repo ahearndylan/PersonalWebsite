@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Calorie Calculator App</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        footer .fa-linkedin, footer .fa-github {
+            transition: color 0.3s ease;
+        }
+
+        footer .fa-linkedin:hover {
+            color: #0e76a8;
+        }
+
+        footer .fa-github:hover {
+            color: #333;
+        }
+
+        @media (max-width: 430px) {
+            .centered-video {
+                display: flex;
+                justify-content: center;
+                margin: 0 auto;
+                padding-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Dylan Ahearn</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resume.html">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="project-overview" class="py-5" style="background-color: #dddedf">
+        <div class="container">
+            <h2 class="text-center mb-4">Burger Calorie Calculator App</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="embed-responsive embed-responsive-16by9 centered-video">
+                        <video controls>
+                            <source src="videos/burgerappdemo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Project Overview</h4>
+                    <p>
+                        This Android calorie calculator app lets users explore and track calories across McDonald's menu items. With an intuitive, multi-activity interface, users can view, sort, and select items (burgers, drinks, snacks) by type, name, or calorie count, then calculate totals for selected items. Each selection opens a detailed view with an image, name, and description, demonstrating effective navigation and user input handling.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project-features" class="py-5 bg-light">
+        <div class="container">
+            <h4 class="mb-4">Key Features</h4>
+            <ul>
+                <li>Multi-activity navigation with a clear, organized layout.</li>
+                <li>Interactive RecyclerView showing menu items with images, names, and calorie counts.</li>
+                <li>Sorting options by type, name, and calorie count using a Spinner.</li>
+                <li>Calculate total calories for selected items and display results in a toast message.</li>
+                <li>Detailed view screen for each food item, including image, name, and description.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="technical-details" class="py-5" style="background-color: #dddedf">
+        <div class="container">
+            <h4 class="mb-4">Technical Details</h4>
+            <p>The app was developed using Android Studio and includes key Android components such as RecyclerView, Spinner, and Toast. The data for food items is stored in a local resource file, parsed, and displayed dynamically. Using Kotlin and Android’s intent system, the app handles user navigation between the main list and detail views effectively.</p>
+        </div>
+    </section>
+
+    <section id="contact-information" class="py-5 bg-light">
+        <div class="container">
+            <h4 class="mb-4">Contact Information</h4>
+            <p>If you have any questions about this project or would like to discuss it further, please feel free to contact me:</p>
+            <ul>
+                <li><strong>Email:</strong> dahearn@clarku.edu</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>Contact: dahearn2021@gmail.com</p>
+            <p>
+                <a href="https://www.linkedin.com/in/dylan-ahearn-b58235236/" target="_blank" class="text-white mx-2">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/ahearndylan" target="_blank" class="text-white mx-2">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

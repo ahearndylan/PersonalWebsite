@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Directory App</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        footer .fa-linkedin, footer .fa-github {
+            transition: color 0.3s ease;
+        }
+
+        footer .fa-linkedin:hover {
+            color: #0e76a8;
+        }
+
+        footer .fa-github:hover {
+            color: #333;
+        }
+
+        @media (max-width: 430px) {
+            .centered-video {
+                display: flex;
+                justify-content: center;
+                margin: 0 auto;
+                padding-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Dylan Ahearn</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="project-overview" class="py-5" style="background-color: #dddedf">
+        <div class="container">
+            <h2 class="text-center mb-4">Student Directory App</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="embed-responsive embed-responsive-16by9 centered-video">
+                        <video controls>
+                            <source src="videos/Lab4Demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Project Overview</h4>
+                    <p>This Android app loads a list of students from a CSV file and displays them in a scrollable list. Users can view detailed information for each student, including their profile picture, by clicking on a list item. The app is designed to showcase the use of multi-activity navigation, data handling, and RecyclerView in Android.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project-features" class="py-5 bg-light">
+        <div class="container">
+            <h4 class="mb-4">Key Features</h4>
+            <ul>
+                <li><strong>Student List:</strong> Loads student data from a CSV file and displays it in a RecyclerView.</li>
+                <li><strong>Multi-Activity Navigation:</strong> Clicking a student opens a detailed view with additional information.</li>
+                <li><strong>Data Management:</strong> The app parses and stores student data in an ArrayList, enabling efficient access and display.</li>
+                <li><strong>Profile Pictures:</strong> Displays gender-specific profile images from resources.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="technical-details" class="py-5" style="background-color: #dddedf">
+        <div class="container">
+            <h4 class="mb-4">Technical Details</h4>
+            <p>The app was built using Kotlin in Android Studio. Student data is loaded from a CSV file stored in the `res/raw` folder and parsed into an `ArrayList<Student>`. Each student item is displayed in a RecyclerView using a custom adapter, and clicking an item opens a DetailActivity where additional information is shown.</p>
+            <p>The `Student` class includes fields for the student's name, gender, email, phone, and address. The RecyclerView uses a custom XML layout for each student entry, displaying the name, phone number, and profile image.</p>
+        </div>
+    </section>
+
+    <section id="contact-information" class="py-5 bg-light" style="background-color: #dddedf">
+        <div class="container">
+            <h4 class="mb-4">Contact Information</h4>
+            <p>If you have any questions about this project, please feel free to contact me:</p>
+            <ul>
+                <li><strong>Email:</strong> dahearn@clarku.edu</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>Contact: dahearn2021@gmail.com</p>
+            <p>
+                <a href="https://www.linkedin.com/in/dylan-ahearn-b58235236/" target="_blank" class="text-white mx-2">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/ahearndylan" target="_blank" class="text-white mx-2">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
