@@ -43,21 +43,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="portfolio.html">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="resume.html">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -66,76 +56,93 @@
     <section id="project-overview" class="py-5" style="background-color: #dddedf">
         <div class="container">
             <h2 class="text-center mb-4">Court Kings HQ</h2>
-            <div class="row align-items-center">
+            <div class="row">
                 <div class="col-md-6 text-center">
-                    <img src="images/logo5.png" alt="Court Kings HQ Logo" class="img-fluid" style="width:50%; height:auto;">
+                    <img src="images/logo5.png" alt="Court Kings HQ Logo" class="img-fluid centered-image" style="width:50%;">
                 </div>
                 <div class="col-md-6">
                     <h4>Project Overview</h4>
-                    <p>Court Kings HQ is a fully automated NBA stats platform that delivers daily basketball analytics via Twitter bots and a dynamic, data-driven website. The system tracks nightly leaders across scoring, efficiency, clutch performance, and season stats using Supabase as a central data hub. The website updates in real time and provides a sleek, mobile-friendly experience for fans.</p>
-                    <p><strong>Project Status:</strong> Live and fully functional, with ongoing enhancements and new feature implementations planned.</p>
-                    <p><strong>Live Website:</strong><a href="https://courtkingshq.onrender.com/" target="_blank"> Court Kings HQ</a></p>
-                    <p><strong>GitHub Repository:</strong><a href="https://github.com/ahearndylan/CourtKingsWebsite" target="_blank"> View the Project on GitHub</a></p>
+                    <p>Court Kings HQ is a full-stack NBA stats platform that delivers real-time analytics via Twitter bots and a dynamic website. The system automates daily stat tracking across key performance categories, including scoring, efficiency, clutch play, and season leaders. Data is fetched, processed, and stored centrally in Supabase and displayed on a modern, mobile-optimized site.</p>
+                    <p><strong>Project Status:</strong> Live and fully functional, with ongoing enhancements and feature expansions planned.</p>
+                    <p><strong>Live Website:</strong> <a href="https://courtkingshq.onrender.com/" target="_blank">Court Kings HQ</a></p>
+                    <p><strong>GitHub Repository:</strong> <a href="https://github.com/ahearndylan/CourtKingsWebsite" target="_blank">View on GitHub</a></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about-court-kings" class="py-5 bg-light">
+    <section id="project-description" class="py-5 bg-light">
         <div class="container">
-            <h4 class="mb-4">About Court Kings HQ</h4>
-            <p>Court Kings HQ is a personal project designed to engage basketball fans with daily insights using automated bots and live visualizations. The site is powered by Python scripts that process NBA data and push updates to a centralized Supabase database. These updates feed directly into a multi-page HTML site hosted on Render, ensuring fresh and reliable content daily.</p>
-            <p>Each stat category is managed by a separate Twitter bot that posts leaderboards and syncs data automatically, allowing the platform to scale and adapt over the course of the NBA season.</p>
+            <h4 class="mb-4">Project Description</h4>
+            <p>This platform combines automation, live data syncing, and user-friendly design to offer fans nightly NBA highlights through stats. Bots track and tweet category leaders, while the website reflects the same data in a sleek interface. All components are connected through Supabase and hosted via Render and Railway.</p>
+            <p>Individual pages highlight nightly leaders, season highs, player spotlights, and a live Twitter feed. A terminal-style analytics dashboard adds a technical, system-level feel to the experience.</p>
         </div>
     </section>
 
-    <section id="project-goals" class="py-5" style="background-color: #dddedf">
+    <section id="key-features" class="py-5" style="background-color: #dddedf">
         <div class="container">
-            <h4 class="mb-4">Project Goals</h4>
-            <p>The Court Kings HQ project set out to:</p>
+            <h4 class="mb-4">Key Features</h4>
             <ul>
-                <li>Automate NBA stat tracking and Twitter updates using Python bots.</li>
-                <li>Build a centralized system to store and serve live data with Supabase.</li>
-                <li>Design a sleek, responsive website with individual stat pages and player spotlights.</li>
+                <li><strong>Automated Twitter Bots:</strong> Python-based bots post daily leaders for scoring, efficiency, clutch performance, season leaders, and NBA trivia.</li>
+                <li><strong>Real-Time Stat Syncing:</strong> All data is stored and served from Supabase using JSON tables updated nightly.</li>
+                <li><strong>Responsive Website:</strong> Multi-page site built with HTML/CSS/Bootstrap and hosted on Render.</li>
+                <li><strong>Terminal-Style Analytics:</strong> Live system logs emulate a data stream to enhance technical depth.</li>
+                <li><strong>Player Spotlight:</strong> Daily player bios and images are randomly featured from a full player index.</li>
+                <li><strong>Stat Archives:</strong> Each bot has a full archive view of historical leaders via dedicated pages.</li>
             </ul>
         </div>
     </section>
 
-    <section id="anticipated-outcomes" class="py-5 bg-light">
+    <section id="project-architecture" class="py-5 bg-light">
         <div class="container">
-            <h4 class="mb-4">Project Outcomes</h4>
-            <p>The completed project delivered:</p>
+            <h4 class="mb-4">Architecture & Stack</h4>
+            <p>The Court Kings HQ system is built on a serverless architecture using Supabase for data handling and JSON storage, with bots hosted via Railway and the front-end site deployed on Render.</p>
             <ul>
-                <li>A scalable backend powered by Railway and Supabase with automated cron jobs.</li>
-                <li>A multi-page website with real-time data, live Twitter integration, and stat archives.</li>
-                <li>A clean user interface built with HTML, CSS, Bootstrap, and responsive design principles.</li>
+                <li><strong>Frontend:</strong> HTML, CSS, Bootstrap, JavaScript</li>
+                <li><strong>Backend:</strong> Python, Tweepy, Supabase (PostgreSQL)</li>
+                <li><strong>Automation:</strong> Cron jobs (Railway Scheduler)</li>
+                <li><strong>Hosting:</strong> Render (Website), Railway (Bots)</li>
+                <li><strong>Database:</strong> Supabase JSON tables</li>
             </ul>
         </div>
     </section>
 
-    <section id="future-plans" class="py-5" style="background-color: #dddedf">
+    <section id="development-process" class="py-5" style="background-color: #dddedf">
+        <div class="container">
+            <h4 class="mb-4">Development Process</h4>
+            <ol>
+                <li>Built initial Twitter bots using Tweepy to post stat leaders.</li>
+                <li>Integrated Supabase to act as a central data source across bots and frontend.</li>
+                <li>Created and styled multi-page HTML website with responsive layout and embedded data fetches.</li>
+                <li>Connected bots to Supabase using REST API and cron jobs via Railway.</li>
+                <li>Launched the full platform and added advanced features like player spotlight and system logs.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="future-plans" class="py-5 bg-light">
         <div class="container">
             <h4 class="mb-4">Future Plans</h4>
-            <p>Future enhancements for Court Kings HQ include:</p>
             <ul>
-                <li>Expanding bot capabilities to include player comparison and advanced stats.</li>
-                <li>Introducing user interactivity, such as a "Test Bots" feature or live search.</li>
-                <li>Packaging the project for public use or collaboration with NBA content creators.</li>
+                <li>Expand bots to include more advanced analytics and real-time comparisons.</li>
+                <li>Add user-interactive components such as player lookup and stat filters.</li>
+                <li>Implement a mini CMS to allow content updates without code changes.</li>
+                <li>Collaborate with other sports projects or content creators to extend reach.</li>
             </ul>
         </div>
     </section>
 
-    <section id="technologies-used" class="py-5 bg-light">
+    <section id="technologies-used" class="py-5" style="background-color: #dddedf">
         <div class="container">
             <h4 class="mb-4">Technologies Used</h4>
             <p><strong>Technologies Used:</strong> Python, HTML, CSS, JavaScript, Bootstrap, Supabase, Tweepy, JSON, Git, Render, Railway.</p>
         </div>
     </section>
 
-    <section id="contact-information" class="py-5" style="background-color: #dddedf">
+    <section id="contact-information" class="py-5 bg-light">
         <div class="container">
             <h4 class="mb-4">Contact Information</h4>
-            <p>If you have any questions about this project or would like to learn more, please feel free to contact me:</p>
+            <p>If you have any questions about this project or would like to connect, feel free to reach out:</p>
             <ul>
                 <li><strong>Email:</strong> dahearn@clarku.edu</li>
             </ul>
